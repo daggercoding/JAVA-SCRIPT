@@ -75,3 +75,27 @@ function inc(a1){
 }
 inc();
 console.log(a1);
+
+                    // for in loop
+
+ let data={
+    name:"vishal",
+    age:25,
+    city:"gwalior",
+    state:"madhya Pradesh"
+}
+
+for(let key in data)
+{
+console.log(key,data[key]);
+}
+
+// check wheater a propertu is in object or not
+if("name" in data)
+{
+    console.log("name is present in the object");
+}
+else
+{
+    console.log("name is not present in the object");
+}
