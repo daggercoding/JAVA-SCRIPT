@@ -44,10 +44,34 @@ function CreateCuboid(len,bre,hei){
         console.log("hello from the module")
     }
 }
+
+
+
 //here we have to use new keywprd which create an empty object
  let cuboid1=new CreateCuboid(10,20,30); 
 
  cuboid1.color="white"; //dynamically add a property in object
  delete cuboid1.breadth; //dynamically DELETE a property FROM object
     
- 
+ //primitive or value type -> it is possible to copy the value
+let a = 10;
+let b = a;
+a++;
+console.log(a);  //output 11
+console.log(b);  //output 10
+//reference or object type -> we can not opy its value
+let c = {value: 10};
+let d = c;
+c.value++;
+console.log(c.value); //output 11
+console.log(d.value); //output 11
+
+
+let a1=100;
+
+function inc(a1){
+    a1++;
+    
+}
+inc();
+console.log(a1);
