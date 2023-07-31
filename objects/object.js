@@ -77,6 +77,7 @@ inc();
 console.log(a1);
 
                     // for in loop
+                    console.log("FOR IN LOOP");
 
  let data={
     name:"vishal",
@@ -90,7 +91,17 @@ for(let key in data)
 console.log(key,data[key]);
 }
 
-// check wheater a propertu is in object or not
+       // for of loop
+       console.log("FOR OF LOOP");
+
+for(let key of Object.entries(data)) //object.entries for key and value.
+                                     //object.key is for the key
+{
+console.log(key);
+}
+       
+
+// check wheater a property is in object or not
 if("name" in data)
 {
     console.log("name is present in the object");
@@ -99,3 +110,26 @@ else
 {
     console.log("name is not present in the object");
 }
+
+
+ 
+                 // OBJECTS CLONING
+// 1 ITERATION                 
+let src =
+{
+    name:"vishal",
+    age:25,
+    adress:"gwalior"
+}
+let dest = {}
+
+for (let key in src)
+{
+    dest[key]=src[key];
+}
+
+// 2 Assign
+let dest1 = Object.assign({},src);
+
+//Spread operator
+let dest2={...src};
